@@ -20,9 +20,9 @@ public class GpuManagerActivity extends CollapsingToolbarBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getFragmentManager().beginTransaction().replace(
-                com.android.settingslib.collapsingtoolbar.R.id.content_frame,
-                new GpuManagerFragment(), TAG_GPU_MANAGER).commit();
+        getSupportFragmentManager().beginTransaction()
+    .replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame, new GpuManagerFragment(), TAG_GPU_MANAGER)
+    .commit();
     }
 
     @Override

@@ -25,8 +25,8 @@ public class CoreControlActivity extends CollapsingToolbarBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getFragmentManager().beginTransaction().replace(
-            com.android.settingslib.collapsingtoolbar.R.id.content_frame,
-            new CoreControlFragment(), TAG_CORECONTROL).commit();
+        getSupportFragmentManager().beginTransaction()
+    .replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame, new CoreControlFragment(), TAG_CORECONTROL)
+    .commit();
     }
 }

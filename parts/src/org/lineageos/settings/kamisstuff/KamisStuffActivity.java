@@ -26,9 +26,9 @@ public class KamisStuffActivity extends CollapsingToolbarBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getFragmentManager().beginTransaction().replace(
-                com.android.settingslib.collapsingtoolbar.R.id.content_frame,
-                new KamisStuffFragment(), TAG_KAMIS_STUFF).commit();
+        getSupportFragmentManager().beginTransaction()
+    .replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame, new KamisStuffFragment(), TAG_KAMIS_STUFF)
+    .commit();
     }
 
     @Override

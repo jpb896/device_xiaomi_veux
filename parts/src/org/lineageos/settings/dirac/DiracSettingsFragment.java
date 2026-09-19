@@ -24,14 +24,14 @@ import android.util.Log;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.PreferenceFragment;
-import androidx.preference.SwitchPreference;
+import com.android.settingslib.widget.SettingsBasePreferenceFragment;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settingslib.widget.MainSwitchPreference;
 
 import org.lineageos.settings.R;
 
-public class DiracSettingsFragment extends PreferenceFragment implements
+public class DiracSettingsFragment extends SettingsBasePreferenceFragment implements
         OnPreferenceChangeListener, OnCheckedChangeListener {
 
     private static final String TAG = "DiracSettingsFragment";
@@ -45,7 +45,7 @@ public class DiracSettingsFragment extends PreferenceFragment implements
 
     private ListPreference mHeadsetType;
     private ListPreference mPreset;
-    private SwitchPreference mHifi;
+    private SwitchPreferenceCompat mHifi;
     private ListPreference mScenes;
     private DiracUtils mDiracUtils;
 
@@ -70,7 +70,7 @@ public class DiracSettingsFragment extends PreferenceFragment implements
         mPreset = (ListPreference) findPreference(PREF_PRESET);
         mPreset.setOnPreferenceChangeListener(this);
 
-        mHifi = (SwitchPreference) findPreference(PREF_HIFI);
+        mHifi = (SwitchPreferenceCompat) findPreference(PREF_HIFI);
         mHifi.setOnPreferenceChangeListener(this);
 
         boolean hifiEnable = mDiracUtils != null ? mDiracUtils.getHifiMode() : false;

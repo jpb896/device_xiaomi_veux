@@ -26,9 +26,9 @@ public class UselessActivity extends CollapsingToolbarBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getFragmentManager().beginTransaction().replace(
-                com.android.settingslib.collapsingtoolbar.R.id.content_frame,
-                new UselessFragment(), TAG_USELESS).commit();
+        getSupportFragmentManager().beginTransaction()
+    .replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame, new UselessFragment(), TAG_USELESS)
+    .commit();
     }
 
     @Override
